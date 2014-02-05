@@ -155,7 +155,7 @@ void MainWindow::task()
 
     {
 
-       z = find_divisor(x, y);
+       z = pgcd(x, y);
 
        this->zone3->setText(QString::number(z));
 
