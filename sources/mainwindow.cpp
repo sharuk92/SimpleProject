@@ -95,46 +95,19 @@ MainWindow::MainWindow(QWidget *parent) :
 }
 
 
-
-int divide(int &m, int &n, int &r)
-
+int pgcd(int p, int q)
 {
-
-    r = m % n;
-
-    return r;
-
+    int r;
+    while((p%q) != 0)
+    {
+        r = p % q;
+        p = q;
+        q = r;
+    }
+    return q;
 }
 
 
-
-int find_divisor(int &m, int &n)
-
-{
-
-    int r = 0;
-
-    if(divide(m, n, r) == 0)
-
-    {
-
-        return n;
-
-    }
-
-    else
-
-    {
-
-        m = n;
-
-        n = r;
-
-        return find_divisor(m, n);
-
-    }
-
-}
 
 
 
